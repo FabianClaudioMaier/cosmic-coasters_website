@@ -1,0 +1,114 @@
+.navbar-nav .nav-link.custom-nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+    color: black;
+}
+
+.navbar-light.bg-light.py-3 {
+    padding-top: .7rem !important;
+    padding-bottom: .7rem !important;
+}
+
+
+
+.jumbotron{
+    height: 85vh;
+}
+
+
+.landing-page {
+    position: relative;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2); /* Adjust the opacity (0.5) to your preference */
+    color: #ffffff; /* Adjust the text color if needed */
+}
+.about-section,
+.events-section,
+.projects-section {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.events-section .card,
+.projects-section .card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer h5 {
+    font-weight: 500;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer .list-inline-item a {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+
+
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .jumbotron {
+        height: auto;
+        padding: 2rem;
+    }
+    .jumbotron-overlay {
+        padding: 2rem;
+    }
+
+    .about-section .row,
+    .events-section .row,
+    .projects-section .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .about-section img,
+    .events-section img {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer h5 {
+        margin-bottom: 1.5rem;
+    }
+}
