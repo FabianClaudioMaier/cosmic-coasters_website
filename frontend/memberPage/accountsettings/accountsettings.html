@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+    <title>Altair Spaceworks - Members</title>
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          referrerpolicy="no-referrer"
+          rel="stylesheet"/>
+
+    <link href="css/accountsettings.css" rel="stylesheet">
+
+</head>
+<body class="d-flex flex-column h-100">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <div class="container">
+        <a class="navbar-brand" href="accountsettings.html">
+            <img alt="altair spaceworks logo" height="65" src="../../img/as_logo.svg" width="65">
+        </a>
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-target="#navbarNav" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="../memberpage.html">Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link custom-nav-link" href="accountsettings.html">Account settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="#announcements">Announcements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="#awards">Awards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="index.html"></a>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-outline-dark" href=../../../index.html>
+            <i class="fas fa-lock"></i> Logout
+        </a>
+    </div>
+</nav>
+
+<form id="user-details-form">
+    <div class="container my-4">
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" id="username" name="username" type="text" value="johndoe">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-control" disabled id="email" name="email" type="email" value="johndoe@example.com">
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label class="form-label" for="firstname">First name</label>
+                    <input class="form-control" id="firstname" name="firstname" type="text" value="John">
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label class="form-label" for="lastname">Last name</label>
+                    <input class="form-control" id="lastname" name="lastname" type="text" value="Doe">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="mb-3">
+            <label class="form-label" for="currentPassword">Please enter your current password</label>
+            <input class="form-control" id="currentPassword" name="currentPassword" type="password">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="newPassword1">Please enter your new password</label>
+            <input class="form-control" id="newPassword1" name="newPassword1" type="password">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="newPassword2">Please confirm your new password</label>
+            <input class="form-control" id="newPassword2" name="newPassword2" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Save changes</button>
+    </div>
+</form>
+
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">About Altair Spaceworks</h5>
+        <p>We are a student union focused on the field of rocketry. Our mission is to explore the universe and master the art of rocketry, engaging students in exciting projects and events.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50">About</a></li>
+          <li><a href="#" class="text-white-50">Events</a></li>
+          <li><a href="#" class="text-white-50">Projects</a></li>
+          <li><a href="#" class="text-white-50">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 id="contact" class="text-uppercase mb-4">Connect With Us</h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-white-50"><i class="fab fa-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#" class="text-white-50"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="#" class="text-white-50"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col text-center">
+        <p class="text-white-50 small">&copy; 2023 Altair Spaceworks. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery, Popper.js, and Bootstrap JavaScript -->
+<script crossorigin="anonymous"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+
+
+<!-- Custom JavaScript -->
+<script src="js/dbconnection.js"></script>
+<script src="js/accountsettings.js"></script>
+</body>
+</html>
