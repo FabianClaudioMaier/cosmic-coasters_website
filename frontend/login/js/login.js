@@ -5,7 +5,7 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
     const password = document.getElementById('password').value;
 
     // Send the login data to the server
-    fetch('/login', {
+    fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
                 localStorage.setItem('token', data.token);
 
                 // Redirect the user to the dashboard or another protected page
-                window.location.href = '../../memberPage/memberPage.html';
+                window.location.href = '../memberPage/memberpage.html';
             }
         });
 });

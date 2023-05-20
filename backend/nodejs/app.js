@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
@@ -10,18 +9,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-console.log(process.env.DATABASE_HOST);
-console.log(process.env.DATABASE_PORT);
-console.log(process.env.DATABASE_USER);
-console.log(process.env.DATABASE_PASSWORD);
-console.log(process.env.DATABASE_NAME);
-
 // Create a MySQL connection
 const db = mysql.createConnection({
     host: 'localhost',
-    port: 8889,
+    port: 3306,
     user: 'root',
-    password:'admin',
+    password:'',
     database: 'asw_users_db',
 });
 
@@ -102,7 +95,7 @@ app.post('/login', (req, res) => {
 });
 
 
-const PORT = 8889 || 3000;
+const PORT = 3000;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
