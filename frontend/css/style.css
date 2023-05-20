@@ -1,3 +1,4 @@
+
 .navbar-nav .nav-link.custom-nav-link {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -41,19 +42,23 @@
     background: rgba(0, 0, 0, 0.2); /* Adjust the opacity (0.5) to your preference */
     color: #ffffff; /* Adjust the text color if needed */
 }
+.nasa-apotd-section,
 .about-section,
 .events-section,
 .projects-section {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
+.nasa-apotd-section .card,
 .events-section .card,
 .projects-section .card {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-
-
+/* container styling for the NASA APOD */
+.container-sm {
+    max-width: 40%;
+}
 
 /* Footer Styling */
 .footer {
