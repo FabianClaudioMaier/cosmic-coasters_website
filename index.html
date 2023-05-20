@@ -71,7 +71,7 @@
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="#projects">Recent projects</a>
                 </li><li class="nav-item">
-                <a class="nav-link custom-nav-link" href="index.html">Sponsorship</a>
+                <a class="nav-link custom-nav-link" href="frontend/sponsorship/sponsorship.html">Sponsorship</a>
             </li>
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="#contact">Contact</a>
@@ -100,22 +100,56 @@
 </div>
 
 <!-- About Section -->
-<section class="about-section py-5">
+<section class="about-section py-5 bg-light">
     <div class="container">
-        <h2 id ="about" class="text-center">About Us</h2>
-        <p class="text-center">Altair Spaceworks is a passionate student union dedicated to the field of rocketry. Our team consists of students from various disciplines who share a common interest in space exploration and rocket science. Together, we work on designing, building, and launching rockets while promoting STEM education and fostering a collaborative environment.</p>
+        <h2 id="about" class="text-center">About Us</h2>
+
+        <!-- History -->
+        <div class="row my-5 align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="frontend/img/history.jpg" alt="Altair History">
+            </div>
+            <div class="col-lg-6">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #343a40;">Our History</h3>
+                <p class="text-justify" style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #6c757d;">Founded in 2015, Altair Spaceworks started as a small club of space enthusiasts at our university. Over the years, we've grown into a robust student union that's made significant contributions to amateur rocketry. We have successfully launched numerous rockets, each one more advanced than the last, pushing the boundaries of what's possible in amateur rocketry. We're proud to have sparked an interest in space exploration across the university and beyond.</p>
+            </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="row my-5 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #343a40;">Our Mission</h3>
+                <p class="text-justify" style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #6c757d;">At Altair Spaceworks, our mission is to expand knowledge of rocketry and space exploration among the student body. We strive to inspire the next generation of scientists, engineers, and innovators by giving them hands-on experience in designing, building, and launching rockets. We also aim to collaborate with industry professionals to provide our members with unique learning opportunities. Our vision is a world where everyone has the opportunity to contribute to the exploration of space.</p>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <img class="img-fluid rounded" src="frontend/img/mission.jpg" alt="Altair Mission">
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div class="row my-5 align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="frontend/img/team.jpg" alt="Altair Team">
+            </div>
+            <div class="col-lg-6">
+                <h3 style="font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #343a40;">Meet the Team</h3>
+                <p class="text-justify" style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #6c757d;">Our team consists of students from various disciplines who share a common interest in space exploration and rocket science. Our diverse backgrounds and perspectives fuel our innovative approach to rocketry. With a blend of theoretical knowledge and practical skills, we are constantly pushing the envelope, exploring new ideas, and challenging the status quo in rocket design and space exploration. Come meet the dedicated individuals who are making a difference at Altair Spaceworks.</p>
+                <a href="#" class="btn btn-primary mt-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem;">Meet Our Team</a>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Events Section -->
-<section class="events-section py-5 bg-light">
+<section class="events-section py-5 ">
     <div class="container">
-        <h2 id = "events" class="text-center">Upcoming Events</h2>
+        <h2 id="events" class="text-center">Upcoming Events</h2>
+        <br>
         <div class="row">
             <!-- Event 1 -->
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="path/to/event1.jpg" alt="Event 1">
+                    <img class="card-img-top" src="frontend/img/rocketlaunch.jpg" alt="Event 1">
                     <div class="card-body">
                         <h5 class="card-title">Rocket Launch</h5>
                         <p class="card-text">Join us for an exciting rocket launch event as we put our latest creation to the test.</p>
@@ -126,7 +160,7 @@
             <!-- Event 2 -->
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="path/to/event2.jpg" alt="Event 2">
+                    <img class="card-img-top" src="frontend/img/workshop.jpg" alt="Event 2">
                     <div class="card-body">
                         <h5 class="card-title">Workshop: Introduction to Rocketry</h5>
                         <p class="card-text">Learn the basics of rocketry and get hands-on experience in building your own model rocket.</p>
@@ -137,7 +171,7 @@
             <!-- Event 3 -->
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="path/to/event3.jpg" alt="Event 3">
+                    <img class="card-img-top" src="frontend/img/fundraising.jpg" alt="Event 3">
                     <div class="card-body">
                         <h5 class="card-title">Fundraising Gala</h5>
                         <p class="card-text">Support our team by attending our annual fundraising gala, featuring guest speakers, dinner, and entertainment.</p>
@@ -150,16 +184,17 @@
 </section>
 
 <!-- Projects Section -->
-<section class="projects-section py-5">
+<section class="projects-section py-5 bg-light">
     <div class="container">
         <h2 id="projects" class="text-center">Recent Projects</h2>
+        <br>
         <div class="row">
             <!-- Project 1 -->
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="path/to/project1.jpg" alt="Project 1">
+                    <img class="card-img-top" src="frontend/img/rocketlaunch2.jpg" alt="Project 1">
                     <div class="card-body">
-                        <h5 class="card-title">Project Galaxy</h5>
+                        <h5 class="card-title">Project Orion</h5>
                         <p class="card-text">Project Orion was an ambitious venture to design and build a high-altitude rocket with advanced guidance systems.</p>
                         <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
@@ -168,7 +203,7 @@
             <!-- Project 2 -->
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="path/to/project2.jpg" alt="Project 2">
+                    <img class="card-img-top" src="frontend/img/workshop2.jpg" alt="Project 2">
                     <div class="card-body">
                         <h5 class="card-title">Rocket Workshop Series</h5>
                         <p class="card-text">Our team organized a series of workshops to teach students about rocketry and provide hands-on experience in building their own rockets.</p>
@@ -179,7 +214,7 @@
             <!-- Project 3 -->
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img class="card-img-top" src="path/to/project3.jpg" alt="Project 3">
+                    <img class="card-img-top" src="frontend/img/community.jpg" alt="Project 3">
                     <div class="card-body">
                         <h5 class="card-title">Community Outreach</h5>
                         <p class="card-text">We partnered with local schools to inspire young students to pursue careers in STEM fields and share our passion for rocketry.</p>
