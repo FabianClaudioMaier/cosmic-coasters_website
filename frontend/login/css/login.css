@@ -1,37 +1,101 @@
-body{height: 100%; margin: 0; padding: 0;font-weight: 400;font-family: Poppins; overflow-x: hidden;}
-*{box-sizing: border-box;}
-img{max-width: 100%}
-.logo{text-align: center; max-width: 300px; margin: auto; }
-.dflex{display: flex; height: 100vh; align-items: center; flex-direction: row; justify-content: space-between;}
-.dLeft{padding: 2rem;   background: #fff; width:450px;    margin: auto;   }
-.dRight{background-color: #ccc; height:100vh;background-image:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0,0,0, 0.82)), url(https://www.psd2concrete5.com/images/slider-img1.jpg); background-size: cover; width:60%; float:right;display: flex;  align-items: center;  padding: 40px;}
-.loginForm{padding: 20px 0;}
-.loginForm .loginTitle{text-align: center; font-size: 1.5rem; color: #000; font-weight: 500; margin-bottom: 50px;}
-.loginForm .field-group{margin-bottom: 15px;}
-input[type="text"],input[type="password"]{height: 46px;border-radius: 0;border: 0; border-bottom: 1px solid rgba(235,237,242,.8); padding: 1rem 0;color: #6c7293; width:100%; margin-bottom: 5px;	font-family: 'Poppins', sans-serif;
+/*/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-input:focus{outline:none;}
-.error{color:#F00; font-size: 12px;}
-.loginExtra{margin-top:26px;display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; font-size: 14px; font-weight: 500 }
-a{color:#6c7293; text-decoration: none; transition: all ease-in-out 0.5s;}
-a:hover{color:#000;}
-.loginAction{margin-top:35px; text-align: center;}
-.btn-default{ font-family: 'Poppins', sans-serif;  background-color: #FF2222; border:1px solid #FF2222; color: #fff;height: 46px;padding-left: 25px;    padding-right:25px; font-weight: 500; border-radius: 30px; cursor: pointer; transition: all ease-in-out 0.5s;}
-.btn-default:hover{background-color: #000; border-color: #000}
-h3{color:#fff; font-size: 42px; margin:0 0 15px; }
-.companyDesc{color:#fff; display: block}
-.wow{visibility: hidden;}
 
-@media only screen and (max-width: 800px){
-    .dflex{flex-direction: column;}
-    .dRight{width:100%; text-align: center}
+
+/* Container Styles */
+.container {
+    max-width: 700px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    margin-bottom: 20px;
 }
-@media only screen and (max-width: 479px){
-    .dLeft{width: 100% ;  padding: 30px 15px;}
-    h3{font-size: 20px;}
-    .dRight{padding: 40px 15px;}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
 }
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+button.btn-primary {
+    background-color: #000000;
+}
+
+button.btn-primary:hover {
+    background-color: #000000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 80px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Adjusted Styles */
+button.btn-block + button.btn-block {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+label{
+    font-size: 20px;
+}
+
+.form-control{
+    font-size: 20px;
+}
+.justify-content-center{
+    margin-bottom: 20px;
+}
+
