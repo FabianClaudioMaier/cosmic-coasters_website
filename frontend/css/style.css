@@ -12,7 +12,9 @@
     padding-bottom: .7rem !important;
 }
 
-
+.navbar-custom {
+    border-bottom: 1px solid #eee;
+}
 
 .jumbotron{
     height: 85vh;
@@ -63,6 +65,7 @@
 /* Footer Styling */
 .footer {
     font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 .footer h5 {
@@ -79,18 +82,12 @@
 }
 
 .footer .list-inline-item a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-right: 0.5rem;
 }
 
 .footer .text-white-50 {
     color: rgba(255, 255, 255, 0.5) !important;
-}
-
-
-.footer {
-    bottom: 0;
-    width: 100%;
 }
 
 
