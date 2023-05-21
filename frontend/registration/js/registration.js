@@ -2,10 +2,15 @@ document.getElementById('registration-form').addEventListener('submit', (event) 
     event.preventDefault();
 
     const firstname = document.getElementById('firstname').value;
+    firstname.style.fontWeight = 'bold';
     const lastname = document.getElementById('lastname').value;
+    lastname.style.fontWeight = 'bold';
     const username = document.getElementById('username').value;
+    username.style.fontWeight = 'bold';
     const password1 = document.getElementById('password1').value;
+    password1.style.fontWeight = 'bold';
     const password2 = document.getElementById('password2').value;
+    password2.style.fontWeight = 'bold';
 
     // Validate the input
     const validationErrors = validateInput(firstname, lastname, username, password1, password2);

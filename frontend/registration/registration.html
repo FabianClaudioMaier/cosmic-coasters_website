@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
+    <style>
+        body{
+            background-image: url("../img/sun.jpeg");
+            background-repeat: ;
+            background-size: }
+    </style>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -42,11 +49,14 @@
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           referrerpolicy="no-referrer"
           rel="stylesheet"/>
-    <link href="../registration/css/registration.css" rel="sytlesheet">
+    <link href="css/registration.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <h1 class="mt-5 mb-3">Registration Form</h1>
+    <img src="/frontend/img/as_logo.svg" alt="altair spaceworks logo" width="100" height="100" style="position: absolute; top: 20px; left: 20px; margin: 20px">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+            <h2 class="text-center mb-4">Registration Form</h2>
     <form id="registration-form">
         <div class="form-group">
             <label for="firstname">First Name:</label>
@@ -68,8 +78,9 @@
             <label for="password2">Please enter your Password again:</label>
             <input class="form-control" id="password2" name="password2" required type="password">
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
     </form>
+    </div>
 </div>
 <!-- Bootstrap modal -->
 <div class="modal" tabindex="-1" id="error-modal">
