@@ -76,6 +76,7 @@ app.post('/register', (req, res) => {
     });
 });
 
+
 app.post('/login', (req, res) => {
     const {username, password} = req.body;
 
@@ -95,87 +96,91 @@ app.post('/login', (req, res) => {
         }
 
         if (result.length === 0) {
-            res.status(401).json({ errors: ['Invalid username or password.'] });
-    
+            res.status(401).json({errors: ['Invalid username or password.']});
+            return;
+        }
+
         const user = result[0];
-          
 
         // Compare the provided password with the stored hashed password
         bcrypt.compare(password, user.password, (compareErr, isMatch) => {
             if (compareErr) {
                 console.error(compareErr);
-                res.status(500).json({ errors: ['An error occurred while comparing passwords.'] });
+                res.status(500).json({errors: ['An error occurred while comparing passwords.']});
                 return;
             }
 
             if (!isMatch) {
-                res.status(401).json({ errors: ['Invalid username or password.'] });
+                res.status(401).json({errors: ['Invalid username or password.']});
                 return;
             }
 
             // The user exists and the password is correct, create a JSON Web Token
             const token = jwt.sign(
-                { id: user.id, username: user.username },
+                {id: user.id, username: user.username},
                 'aZ9%$hfG4&&mM7@r^wU*1pDz(8t_c,',
-                { expiresIn: '1h' }
+                {expiresIn: '1h'}
             );
 
-            res.status(200).json({ token, message: 'Login successful.' });
+            res.status(200).json({token, message: 'Login successful.'});
         });
-
     });
 });
+
 
 // Middleware to validate and extract user information from JWT
-function authenticateToken(req, res, next) {
-    // Get the JWT from the request headers or cookies
-    const token = req.headers.authorization;
+    function authenticateToken(req, res, next) {
+        // Get the JWT from the request headers or cookies
+        const token = req.headers.authorization;
 
-    if (!token) {
-        return res.status(401).json({ error: 'Unauthorized' });
+        if (!token) {
+            return res.status(401).json({error: 'Unauthorized'});
+        }
+
+        // Verify and decode the JWT
+        jwt.verify(token, 'aZ9%$hfG4&&mM7@r^wU*1pDz(8t_c,', (err, decodedToken) => {
+            if (err) {
+                return res.status(403).json({error: 'Invalid token'});
+            }
+
+            // Populate req.user with the decoded token payload
+            req.user = decodedToken;
+
+            next();
+        });
     }
 
-    // Verify and decode the JWT
-    jwt.verify(token, 'aZ9%$hfG4&&mM7@r^wU*1pDz(8t_c,', (err, decodedToken) => {
-        if (err) {
-            return res.status(403).json({ error: 'Invalid token' });
-        }
+    app.get('/user', authenticateToken, (req, res) => {
+        // Extract the user ID from the req.user object
+        const userId = req.user.id;
 
-        // Populate req.user with the decoded token payload
-        req.user = decodedToken;
+        // Query the database to retrieve the user information
+        const userQuery = 'SELECT * FROM users WHERE id = ?';
+        db.query(userQuery, [userId], (err, result) => {
+            if (err) {
+                console.error(err);
+                res.status(500).json({error: 'An error occurred while retrieving user information.'});
+                return;
+            }
 
-        next();
+            if (result.length === 0) {
+                res.status(404).json({error: 'User not found.'});
+                return;
+            }
+
+            const user = result[0];
+            res.status(200).json({user});
+        });
     });
-}
 
-app.get('/user', authenticateToken, (req, res) => {
-    // Extract the user ID from the req.user object
-    const userId = req.user.id;
 
-    // Query the database to retrieve the user information
-    const userQuery = 'SELECT * FROM users WHERE id = ?';
-    db.query(userQuery, [userId], (err, result) => {
-        if (err) {
-            console.error(err);
-            res.status(500).json({ error: 'An error occurred while retrieving user information.' });
-            return;
-        }
+    const PORT = 3000;
 
-        if (result.length === 0) {
-            res.status(404).json({ error: 'User not found.' });
-            return;
-        }
-
-        const user = result[0];
-        res.status(200).json({ user });
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
     });
-});
 
 
 
-const PORT = 3000;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
 
