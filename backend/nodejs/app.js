@@ -77,11 +77,11 @@ app.post('/register', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
+    const {username, password} = req.body;
 
     // Validate user input
     if (!username || !password) {
-        res.status(400).json({ errors: ['Please provide both username and password.'] });
+        res.status(400).json({errors: ['Please provide both username and password.']});
         return;
     }
 
@@ -90,16 +90,15 @@ app.post('/login', (req, res) => {
     db.query(userQuery, [username], (err, result) => {
         if (err) {
             console.error(err);
-            res.status(500).json({ errors: ['An error occurred while checking the user.'] });
+            res.status(500).json({errors: ['An error occurred while checking the user.']});
             return;
         }
 
         if (result.length === 0) {
             res.status(401).json({ errors: ['Invalid username or password.'] });
-            return;
-        }
-
+    
         const user = result[0];
+          
 
         // Compare the provided password with the stored hashed password
         bcrypt.compare(password, user.password, (compareErr, isMatch) => {
@@ -123,6 +122,7 @@ app.post('/login', (req, res) => {
 
             res.status(200).json({ token, message: 'Login successful.' });
         });
+
     });
 });
 
