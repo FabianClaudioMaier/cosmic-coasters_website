@@ -5,30 +5,30 @@
 
 h1 {
     font-size: 2em;
-    font-family: "Core Sans N W01 35 Light";
     font-weight: normal;
     margin: .67em 0;
     display: block;
 }
 
-#registered {
-    margin-top: 50px;
-}
 
+img {
+    position: absolute !important;
+    margin: 0 !important;
+    top:auto !important;
+    left: auto !important;
+}
+/*
 #registered img {
     margin-bottom: 0px;
     width: 100px;
     height: 100px;
 }
+*/
 
-#registered span {
-    clear: both;
-    display: block;
-}
-
+/*
 img {
     margin-bottom: 20px;
-}
+}*/
 
 .avatar {
     margin: 10px 0 20px 0;
@@ -41,6 +41,57 @@ img {
     width:450px;
     margin-left:auto;
     margin-right:auto;
+}
+
+/* Container Styles */
+.container {
+    max-width: 700px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.form-control{
+    font-size: 20px;
+}
+
+button.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+button.btn-primary {
+    background-color: #000000;
+}
+
+button.btn-primary:hover {
+    background-color: #000000;
+}
+/* Adjusted Styles */
+button.btn-block + button.btn-block {
+    margin-top: 10px;
+    font-size: 17px;
 }
 
 .user {
@@ -79,12 +130,23 @@ input::-moz-selection {
 input::selection {
     background: #037db6;
 }
+.mb-4 {
+    margin-bottom: 80px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 
 body{
-    color: #fff;
+
     background-color:#f0f0f0;
-    font-family:helvetica;
-    background:url('http://clevertechie.com/img/bnet-bg.jpg') #0f2439 no-repeat center top;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .body-content{
@@ -103,22 +165,10 @@ input[type="text"],
 input[type="password"],
 input[type="email"]
 {
-    height:30px;
-    width:100%;;
+
     display: inline-block;
     vertical-align: middle;
-    height: 34px;
-    padding: 0 10px;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    line-height: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(255, 255, 255, 0.7);
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 2px;
+
 }
 
 select,
@@ -152,24 +202,9 @@ input[type="email"]:focus {
     background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
 }
-.btn {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 3px 0;
-    padding: 6px 20px;
-    font-size: 15px;
-    line-height: 20px;
-    height: 34px;
-    background-color: rgba(0, 0, 0, 0.15);
-    color: #00aeff;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 rgba(0, 0, 0, 0);
-    border-radius: 2px;
-    -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-}
-.btn.active,
+
+
+/*.btn.active,
 .btn:active {
     padding: 7px 19px 5px 21px;
 }
@@ -193,19 +228,10 @@ input[type="email"]:focus {
     border-color: rgba(255, 255, 255, 0.07);
     box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
 }
-.btn-primary {
-    background-color: #098cc8;
-    color: #ffffff;
-    border: 1px solid transparent;
-    box-shadow: 0 0 rgba(0, 0, 0, 0);
-    border-radius: 2px;
-    -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    background-image: -webkit-linear-gradient(top, #0f9ada, #0076ad);
-    background-image: linear-gradient(to bottom, #0f9ada, #0076ad);
-    border: 0;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
-}
+*/
+
+
+/*
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #21b0f1;
@@ -231,12 +257,8 @@ input[type="email"]:focus {
     background-image: linear-gradient(to bottom, #006ea1, #00608d);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) inset, 0 0 0 1px rgba(255, 255, 255, 0.07) inset;
 }
-.btn-block {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-}
+ */
+
 
 .alert {
     -moz-box-sizing: border-box;
@@ -265,3 +287,18 @@ input[type="email"]:focus {
     background-color: #15360e;
     box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
 }
+
+.label{
+    font-weight: bold;
+    color: black;
+}
+
+.mb-3{
+    font-weight: bold;
+}
+
+div{
+    font-weight: bold;
+}
+/*body{color: white}*/
+
