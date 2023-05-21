@@ -111,6 +111,51 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Middleware to validate and extract user information from JWT
+function authenticateToken(req, res, next) {
+    // Get the JWT from the request headers or cookies
+    const token = req.headers.authorization;
+
+    if (!token) {
+        return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    // Verify and decode the JWT
+    jwt.verify(token, 'aZ9%$hfG4&&mM7@r^wU*1pDz(8t_c,', (err, decodedToken) => {
+        if (err) {
+            return res.status(403).json({ error: 'Invalid token' });
+        }
+
+        // Populate req.user with the decoded token payload
+        req.user = decodedToken;
+
+        next();
+    });
+}
+
+app.get('/user', authenticateToken, (req, res) => {
+    // Extract the user ID from the req.user object
+    const userId = req.user.id;
+
+    // Query the database to retrieve the user information
+    const userQuery = 'SELECT * FROM users WHERE id = ?';
+    db.query(userQuery, [userId], (err, result) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'An error occurred while retrieving user information.' });
+            return;
+        }
+
+        if (result.length === 0) {
+            res.status(404).json({ error: 'User not found.' });
+            return;
+        }
+
+        const user = result[0];
+        res.status(200).json({ user });
+    });
+});
+
 
 const PORT = 3000;
 
