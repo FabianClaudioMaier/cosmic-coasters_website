@@ -85,7 +85,7 @@ app.post('/login', (req, res) => {
         return;
     }
 
-    // Check if the user exists and the password is correct
+    // Check if the user exists
     const userQuery = 'SELECT * FROM users WHERE username = ?';
     db.query(userQuery, [username], (err, result) => {
         if (err) {
@@ -94,20 +94,35 @@ app.post('/login', (req, res) => {
             return;
         }
 
-        if (result.length === 0 || result[0].password !== password) {
-            res.status(401).json({errors: ['Invalid username or password.']});
-            return;
-        }
-
-        // The user exists and the password is correct, create a JSON Web Token
+        if (result.length === 0) {
+            res.status(401).json({ errors: ['Invalid username or password.'] });
+    
         const user = result[0];
-        const token = jwt.sign(
-            {id: user.id, username: user.username},
-            'aZ9%$hfG4&&mM7@r^wU*1pDz(8t_c,',
-            {expiresIn: '1h'}
-        );
+          
 
-        res.status(200).json({token, message: 'Login successful.'});
+        // Compare the provided password with the stored hashed password
+        bcrypt.compare(password, user.password, (compareErr, isMatch) => {
+            if (compareErr) {
+                console.error(compareErr);
+                res.status(500).json({ errors: ['An error occurred while comparing passwords.'] });
+                return;
+            }
+
+            if (!isMatch) {
+                res.status(401).json({ errors: ['Invalid username or password.'] });
+                return;
+            }
+
+            // The user exists and the password is correct, create a JSON Web Token
+            const token = jwt.sign(
+                { id: user.id, username: user.username },
+                'aZ9%$hfG4&&mM7@r^wU*1pDz(8t_c,',
+                { expiresIn: '1h' }
+            );
+
+            res.status(200).json({ token, message: 'Login successful.' });
+        });
+
     });
 });
 
@@ -155,6 +170,7 @@ app.get('/user', authenticateToken, (req, res) => {
         res.status(200).json({ user });
     });
 });
+
 
 
 const PORT = 3000;
