@@ -2,12 +2,6 @@
 <html lang="de">
 <head>
 
-    <style>
-        body{
-            background-image: url("../img/sun.jpeg");
-            background-repeat: ;
-            background-size: }
-    </style>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -53,40 +47,43 @@
 </head>
 <body>
 <div class="container">
-    <img src="/frontend/img/as_logo.svg" alt="altair spaceworks logo" width="100" height="100" style="position: absolute; top: 20px; left: 20px; margin: 20px">
+    <a href="../../index.html">
+        <img src="/frontend/img/as_logo.svg" alt="altair spaceworks logo" width="100" height="100">
+    </a>
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-12">
             <h2 class="text-center mb-4">Registration Form</h2>
-    <form id="registration-form">
-        <div class="form-group">
-            <label for="firstname">First Name:</label>
-            <input class="form-control" id="firstname" name="firstname" required type="text">
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input class="form-control" id="firstname" name="firstname" required type="text">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input class="form-control" id="lastname" name="lastname" required type="text">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input class="form-control" id="username" name="username" required type="text">
+                </div>
+                <div class="form-group">
+                    <label for="password1">Password:</label>
+                    <input class="form-control" id="password1" name="password1" required type="password">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Please enter your password again:</label>
+                    <input class="form-control" id="password2" name="password2" required type="password">
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="lastname">Last Name:</label>
-            <input class="form-control" id="lastname" name="lastname" required type="text">
-        </div>
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input class="form-control" id="username" name="username" required type="text">
-        </div>
-        <div class="form-group">
-            <label for="password1">Password:</label>
-            <input class="form-control" id="password1" name="password1" required type="password">
-        </div>
-        <div class="form-group">
-            <label for="password2">Please enter your Password again:</label>
-            <input class="form-control" id="password2" name="password2" required type="password">
-        </div>
-        <button class="btn btn-primary btn-block" type="submit">Submit</button>
-    </form>
     </div>
-</div>
-<!-- Bootstrap modal -->
-<div class="modal" tabindex="-1" id="error-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
+    <!-- Bootstrap modal -->
+    <div class="modal" id="error-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
             </div>
         </div>
     </div>
