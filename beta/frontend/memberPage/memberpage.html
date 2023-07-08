@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="Altair Spaceworks is a student union focused on the field of rocketry.
+                   We explore the universe and master the art of rocketry, engaging students in exciting
+                   projects and events." name="description">
+
+    <!-- Apple touch icons for different sizes -->
+    <link href="/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="/favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="/favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="/favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="/favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="/favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="/favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+
+    <!-- Favicon images for different sizes -->
+    <link href="/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+
+    <!-- Website manifest file -->
+    <link href="/site.webmanifest" rel="manifest">
+
+    <!-- Windows tile properties -->
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="/ms-icon-144x144.png" name="msapplication-TileImage">
+
+    <!-- Theme color for browser address bar -->
+    <meta content="#ffffff" name="theme-color">
+
+    <title>Altair Spaceworks - Members</title>
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <link href="css/memberpage.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 navbar-custom sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="memberpage.html">
+            <img src="../img/as_logo.svg" alt="altair spaceworks logo" width="65" height="65">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link custom-nav-link" href="memberpage.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="accountsettings/accountsettings.html">Account settings</a>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-outline-dark" href=../../index.html>
+            <i class="fas fa-lock"></i> Logout
+        </a>
+    </div>
+</nav>
+
+<!-- Members Page Content -->
+<div class="container my-5">
+    <h1 class="text-center">Welcome to Altair Spaceworks Members Area</h1>
+    <hr>
+
+    <div class="container my-4">
+        <div class="row">
+
+            <!-- Mapbox API -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <h4 class="card-header"><i class="fas fa-rocket"></i> Rocket Launch Location</h4>
+                    <div class="card-body p-0">
+                        <div id="map" style="width:100%;height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather API -->
+            <div class="col-md-6">
+                <div class="card bg-light h-100">
+                    <h4 class="card-header"><i class="fas fa-cloud-sun"></i> Weather Forecast</h4>
+                    <div class="card-body text-center d-flex flex-column justify-content-around">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <p class="card-text"><i class="fas fa-thermometer-half"></i> Temperature</p>
+                                <h5 class="card-text text-primary" id="temperature"></h5>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <p class="card-text"><i class="fas fa-tint"></i> Humidity</p>
+                                <h5 class="card-text text-info" id="humidity"></h5>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <p class="card-text"><i class="fas fa-wind"></i> Wind Speed</p>
+                                <h5 class="card-text text-warning" id="wind-speed"></h5>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <p class="card-text"><i class="fas fa-cloud"></i> Weather</p>
+                                <h5 class="card-text text-secondary" id="weather"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container my-4">
+        <!-- Countdown Timer for Next Rocket Launch -->
+        <div class="row">
+            <div class="col">
+                <div class="card bg-light">
+                    <h4 class="card-header"><i class="fa-solid fa-hourglass-half"></i> Countdown to Next Rocket Launch</h4>
+                    <div class="card-body">
+                        <div id="countdown" class="row gy-3 gx-5 d-flex justify-content-center text-center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery, Popper.js, and Bootstrap JavaScript -->
+<script crossorigin="anonymous"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+
+<script src="js/countdown/countdown.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+<script src="js/api/mapbox.js"></script>
+<script src="js/api/openweathermap.js"></script>
+<script src="js/memberpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/*/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    max-width: 700px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+button.btn-primary {
+    background-color: #000000;
+}
+
+button.btn-primary:hover {
+    background-color: #000000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 80px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Adjusted Styles */
+button.btn-block + button.btn-block {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+input.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+label{
+    font-size: 20px;
+}
+
+.form-control{
+    font-size: 20px;
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -webkit-transition: background-position 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition: background-position 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+select:hover,
+textarea:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+}
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border: 2px solid;
+    border-color: #1e5f99;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+.justify-content-center{
+    margin-bottom: 20px;
+}
+
