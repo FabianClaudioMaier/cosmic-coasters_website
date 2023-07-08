@@ -37,7 +37,7 @@
     <!-- Theme color for browser address bar -->
     <meta content="#ffffff" name="theme-color">
 
-    <title>Cosmic Coasters</title>
+    <title>BETA Cosmic Coasters</title>
 
     <!-- Bootstrap CSS -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
@@ -48,14 +48,14 @@
           referrerpolicy="no-referrer"
           rel="stylesheet"/>
 
-    <link href="frontend/css/style.css" rel="stylesheet">
+    <link href="./css/beta.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 navbar-custom sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="beta.html">
             <img alt="Cosmic Coasters logo" height="65" src="frontend/img/as_logo.svg" width="65">
         </a>
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
@@ -65,7 +65,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link custom-nav-link" href="index.html">Home</a>
+                    <a class="nav-link custom-nav-link" href="beta.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="#about">About</a>
@@ -76,11 +76,11 @@
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="#projects">Recent projects</a>
                 </li>
-            <!--
+            
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="#sponsors">Sponsors</a>
                 </li>
-              -->  
+                
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="mailto:software@cosmic-coasters.at">Contact</a> <!--data-target="#contactModal" data-toggle="modal"-->
                 </li>
@@ -287,7 +287,52 @@
     </div>
 </section>
 
-
+<!-- Sponsor Section -->
+<section class="sponsor-section py-4" id="sponsors">
+    <div class="container">
+        <h2 class="text-center" id="sponsors">Our Sponsors</h2>
+        <br>
+        <div class="row">
+            <!-- Sponsors 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img alt="Sponsor 1" class="card-img-top" src="frontend/img/FH_logo.png" href="https://www.fh-campuswien.ac.at/">
+                    <div class="card-body">
+                        <h5 class="card-title">FH Campus Wien</h5>
+                        <p class="card-text">Our biggest contributor is the FH Campus Wien. The university provides the team with a lot of aid.
+                            Accomodations, financially and technically. Without its support, this team would not exist as it is now. 
+                        </p>
+                         <a class="btn btn-dark" href="https://www.fh-campuswien.ac.at/">Visit our Sponsor</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sponsor 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img alt="Sponsor 2" class="card-img-top" src="frontend/img/elvis_logo.png" href="https://elvis.science/">
+                    <div class="card-body">
+                        <h5 class="card-title">Elvis LAB</h5>
+                        <p class="card-text">The Embedded Lab Vienna for IoT & Security (short ELVIS) is contributing electrical parts and technical details
+                             to our latest attempt on constructing our own On-Board Firmware.
+                        </p>
+                        <a class="btn btn-dark" href="https://elvis.science/">Visit our Sponsor</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sponsor 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img alt="Sponsor 3" class="card-img-top" src="frontend/img/questionmark.svg" href="mailto:sponsoring@comsic-coasters.at">
+                    <div class="card-body">
+                        <h5 class="card-title">Maybe you?</h5>
+                        <p class="card-text">We are always glad to welcome new contributors. You want to support us in our endavours? Feel free to reach out to us!</p>
+                        <a class="btn btn-dark" href="mailto:sponsoring@comsic-coasters.at">Reach out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Nasa Astronomy Picture of the Day
 <section class="nasa-apotd-section py-5">
@@ -322,7 +367,7 @@
                     <li><a class="text-white-50" href="#about">About</a></li>
                     <li><a class="text-white-50" href="#events">Events</a></li>
                     <li><a class="text-white-50" href="#projects">Projects</a></li>
-                    <!--<li><a class="text-white-50" href="#sponsors">Sponsors</a></li>-->
+                    <li><a class="text-white-50" href="#sponsors">Sponsors</a></li>
                     <li><a class="text-white-50" href="mailto:software@cosmic-coasters.at">Contact</a> <!--data-target="#contactModal" data-toggle="modal"-->
                     </li>
                 </ul>
@@ -350,7 +395,7 @@
 </footer>
 
 <div aria-hidden="true" aria-labelledby="contactModalLabel" class="modal fade" id="contactModal" role="dialog"
-     tabindex="-1">
+     tabbeta="-1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-dark text-white">
@@ -396,7 +441,7 @@
 <script crossorigin="anonymous"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
-<script src="backend/js/index.js"></script>
+<script src="backend/js/beta.js"></script>
 <script src="frontend/js/ajax.js"></script>
 <script src="frontend/memberPage/js/api/astronomypictureoftheday.js"></script>
 </body>
